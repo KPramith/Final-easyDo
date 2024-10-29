@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyDo | Login</title>
+  
+    <link rel="stylesheet" href="css/login.css">
+    
+
+</head>
+<body>
+  
+    <div class="header">
+       <a href="index.php"><h2 class ="logo">easyDo</h2></a>
+        <nav class="navigation">
+            
+            <a href="singin.php">SingIn</a>
+            <a href="contact.php">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </div>
+
+    <div class="wrapper"> 
+        <span class="incon-close">
+          </ion-icon><ion-icon name="close"></ion-icon>
+        </span>
+
+        <!-- Login Form -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="loginForm" method="post" action="login.php" onsubmit="return validateLoginForm()">
+                <div class="input-box">
+                    <span class="icon"> <ion-icon name="mail"></ion-icon></span>
+                    <input name="emailL" type="email" id="emailL" >
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input name="password" type="password" id="password" >
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+    
+                    <button type="submit" name="submit" class="btn">Login</button>
+            
+                <div class="login-register">
+                    <p>
+                        Don't have an account? 
+                        <a href="#" class="register-link">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form id="regForm" method="post" action="index.html" onsubmit="return validateRegistrationForm()">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input name="username" type="text" id="username" >
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input name="email" type="email" id="email" >
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+                    <input name="nic" type="text" id="nic" >
+                    <label>NIC</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input name="tno" type="text" id="tno" >
+                    <label>Tell No</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input name="password" type="password" id="password" >
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" id="terms"> I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>
+                        Already have an account? 
+                        <a href="#" class="login-link">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+ 
+    
+
+    <script src="javascrpt/scrypt.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+<script>
+
+   // Login Form Validation
+   function validateLoginForm() {
+            var emailL = document.getElementById("emailL").value.trim();
+            var password = document.getElementById("password").value.trim();
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailL === "") {
+                alert("Email cannot be empty.");
+                return false;
+            }
+
+            if (!emailPattern.test(emailL)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password cannot be empty.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            return true;
+        }
+            // Register Form Validation
+        function validateRegistrationForm() {
+        var username = document.getElementById("username").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var nic = document.getElementById("nic").value.trim();
+        var tno = document.getElementById("tno").value.trim();
+        var password = document.getElementById("password").value.trim();
+        var termsChecked = document.getElementById("terms").checked;
+
+        // Regular Expressions for Validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var phonePattern = /^\d{10}$/;  // Assuming a 10-digit phone number
+        var nicPattern = /^[0-9]+$/;  // For Sri Lankan NIC, e.g., 123456789V or 123456789012
+
+        // Username Validation
+        if (username === "") {
+            alert("Username cannot be empty.");
+            return false;
+        }
+
+        // Email Validation
+        if (email === "") {
+            alert("Email cannot be empty.");
+            return false;
+        } else if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // NIC Validation
+        if (nic === "") {
+            alert("NIC cannot be empty.");
+            return false;
+        } else if (!nicPattern.test(nic)) {
+            alert("Please enter a valid NIC number.");
+            return false;
+        }
+
+        // Phone Number Validation
+        if (tno === "") {
+            alert("Tell No cannot be empty.");
+            return false;
+        } else if (!phonePattern.test(tno)) {
+            alert("Please enter a valid phone number (10 digits).");
+            return false;
+        }
+
+        // Password Validation
+        if (password === "") {
+            alert("Password cannot be empty.");
+            return false;
+        }
+
+        // Terms and Conditions Validation
+        if (!termsChecked) {
+            alert("You must agree to the terms & conditions.");
+            return false;
+        }
+
+        return true;  // Proceed with form submission if all validations pass
+    }
+</script>
+
+

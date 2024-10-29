@@ -1,0 +1,102 @@
+
+/*Home section................................*/
+
+.home {
+    background: url(img/e7.jpg)  no-repeat center center/cover;
+    height: 600px;
+    top: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards 0.5s;
+}
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    transition: background 0.3s ease;
+}
+.home:hover::before {
+    background: rgba(0,0,0,0.3);
+}
+.home-content {
+    position: relative;
+    z-index: 1;
+}
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards 0.5s;
+}
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards 0.7s;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn {
+    display: inline-block;
+    background: #162938;
+    font-size: 25px;
+    color: white;
+    padding: 0.9rem 3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.5s ease;
+   
+}
+
+.btn:hover {
+    background: #000000;
+    transform: translateY(-3px);
+}
+
+
+.title h2{
+    background: #162938;
+    height: 50px;
+    top: 20;
+    left: 0;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; 
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards 0.7s;
+   
+}
+
+@keyframes fadeInUpT {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    
+}
+
+body{
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: url(img/e7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 16px;
+    }
+    
+a{
+    text-decoration: none;
+    color: #eee;
+}
+header
+{
+    display: contents;
+    background: #162938;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.appname h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    
+}
+
+.loggedin {
+    color: #b2bec3;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 20px;
+    
+}
+
+.loggedin::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: #0031b8;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+main{
+    width: 1000px;
+    margin: 30px auto;
+}
+
+main h1{
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+main h1 span {
+    font-size: 20px;
+}
+
+table.masterlist{
+  
+    width: 100%;
+    border-collapse: collapse;
+    border:solid  #eeecec;
+    backdrop-filter: blur(20px);
+    background: transparent;
+}
+
+table.masterlist th{
+    background-color: #eeecec;
+    color: #162938;
+    text-align: left;
+}
+
+table.masterlist td{
+   
+    color: #ffffff;
+    
+}
+
+table.masterlist th, table.masterlist td {
+    padding: 10px;
+    border-bottom: 1.5px solid #ffffff;
+    border-right: 1.5px solid #fffdfd;
+    backdrop-filter: blur(20px);
+    background: transparent;
+
+}

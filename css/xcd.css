@@ -1,0 +1,283 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1c20 0%, #2c3e50 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #e0e0e0;
+}
+
+/* Header Styles */
+header {
+    background: #2d3436;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.appname h2 {
+    color: #ff6b98;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 107, 152, 0.3);
+}
+
+.loggedin {
+    color: #b2bec3;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.loggedin::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: #00b894;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Main Content */
+main {
+    background: #2d3436;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+main h1 {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    color: #dfe6e9;
+    font-size: 2rem;
+}
+
+/* Profile Picture Styles */
+.pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ff6b98;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 107, 152, 0.2);
+}
+
+.pic:hover {
+    transform: scale(1.05);
+}
+
+.pimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+/* Profile Form Styles */
+.userform {
+    background: rgba(52, 73, 94, 0.4);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+.userform p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(45, 52, 54, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.userform p:hover {
+    transform: translateX(10px);
+}
+
+.userform label {
+    color: #b2bec3;
+    font-size: 1rem;
+    width: 150px;
+    font-weight: 500;
+}
+
+.userform p > :nth-child(2) {
+    color: #dfe6e9;
+    font-size: 1rem;
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+/* Edit Profile Button */
+.userform button {
+    background: linear-gradient(135deg, #ff6b98 0%, #ff4757 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.userform button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 152, 0.4);
+}
+
+.userform button a {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+}
+
+.userform button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.userform button:hover::before {
+    left: 100%;
+}
+
+/* Back Link */
+span a {
+    color: #ff6b98;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+span a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff6b98;
+    transition: width 0.3s ease;
+}
+
+span a:hover::after {
+    width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #b2bec3;
+    margin-top: 2rem;
+}
+
+/* Error Messages */
+.error {
+    background: rgba(255, 71, 87, 0.2);
+    color: #ff4757;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    main h1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .userform p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .userform label {
+        width: 100%;
+    }
+
+    .userform button {
+        width: 100%;
+    }
+
+    span a {
+        margin: 1rem 0;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2d3436;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff6b98;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff4757;
+}

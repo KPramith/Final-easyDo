@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  sans-serif;
+
+}
+
+.services {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 21%;
+    background: linear-gradient(135deg, #ffffff 0%, #021930 100%);
+    margin: 20px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 22px;
+    cursor: pointer;
+    padding-top: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: .4s;
+    margin-bottom: 1rem;
+
+  
+}
+
+.container:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -10px);
+}
+
+img {
+    width: 320px;
+    height: 250px;
+    border-radius: 22px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+    transition: .4s;
+}
+
+img:hover {
+    transform: scale(1);
+    transition: .6s;
+}
+
+.dt p {
+    font-size: 15px;
+    text-align: center;
+    color: #f1f1f1;
+    padding-top: 5px;  
+}
+
+h6 {
+    font-size: 30px;
+    text-align: center;
+    color: #1e2936;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.str {
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    font-size: 55px;
+    transition:.4s ;
+    margin: 1px;
+}
+
+.str p {
+    padding: 3px;
+    color: rgb(240, 143, 25);
+    transition: .4s;
+}
+
+.str p:hover {
+    transform: scale(1.2);
+    transition: .6s;
+}
+
+button {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: .5s;
+}
+
+button:hover {
+    color: darkorange;
+}
+
+.buy-1 {
+    background: #162938;
+}
+
+
+.services, .projects, .about {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.services h2, .projects h2, .about h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1a202c, #2d3748);
+    color: #fff;
+    padding: 4rem 0 2rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
